@@ -9,14 +9,14 @@ export default defineConfig({
   plugins: [
     remix({
       basename: "/remix-spa-mode/",
-      buildEnd(args) {
-        if (!args.viteConfig.isProduction) return;
-        const buildPath = args.viteConfig.build.outDir;
-        copyFileSync(
-          join(buildPath, "index.html"),
-          join(buildPath, "404.html"),
-        );
-      },
+      // buildEnd(args) {
+      //   if (!args.viteConfig.isProduction) return;
+      //   const buildPath = args.viteConfig.build.outDir;
+      //   copyFileSync(
+      //     join(buildPath, "index.html"),
+      //     join(buildPath, "404.html"),
+      //   );
+      // },
       future: {
         v3_fetcherPersist: true,
         v3_relativeSplatPath: true,
